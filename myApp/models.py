@@ -28,7 +28,7 @@ class DateWeather(models.Model):
     city=models.ForeignKey(City, on_delete=models.CASCADE, related_name="dateweather")
     date=models.DateField()
     weather_status=models.CharField(max_length=30)
-    status_icon=models.CharField(max_length=30)
+    status_icon=models.CharField(max_length=30, blank=True)
     wind_speed=models.IntegerField()
     humidity=models.IntegerField()
     temperature=models.IntegerField()
